@@ -97,7 +97,7 @@
         </a>
     </li>
     <li>
-        <a href="#">
+        <a href="usuarios.html">
           <span class="icon color5"><i class="fa fa-group"></i></span>Usuarios
         </a>
     </li>
@@ -119,12 +119,31 @@
     </ol>
 
     <!-- Start Page Header Right Div -->
-    <div class="right">
+    <div class="right col-lg-7">
       <div class="btn-group" role="group" aria-label="...">
-        <a href="index.html" class="btn btn-light">Dashboard</a>
-        <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
-        <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
-        <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
+        <form class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-sm-1 control-label form-label">Marca</label>
+                  <div class="col-sm-3 col-lg-5">
+                    <select class="selectpicker" style="display: none;">
+                        <option>Mundo Verde</option>
+                      </select>                
+                  </div>
+                  <div class="col-sm-3 col-lg-6">
+
+                    <fieldset>
+                        <div class="control-group">
+                          <div class="controls">
+                           <div class="input-prepend input-group">
+                             <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
+                             <input type="text" id="date-range-picker" class="form-control active" value="03/18/2015 - 03/23/2015"> 
+                           </div>
+                          </div>
+                        </div>
+                    </fieldset>              
+                  </div>
+                </div>
+              </form>
       </div>
     </div>
     <!-- End Page Header Right Div -->
@@ -347,6 +366,144 @@
     </ul>
   </div>
   <!-- End Top Stats -->
+
+  <div class="row">
+    <!-- Start Chart -->
+    <div class="col-lg-4 col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-title">
+          Campanhas montadas
+        </div>
+            <div class="panel-body">
+              <div id="chartist-pie" class="ct-chart ct-perfect-fourth"></div>
+            </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-title">
+          PDV's montados
+        </div>
+        <div class="panel-body">
+          <div id="chartist-gauge" class="ct-chart ct-perfect-fourth"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VER CONFORMIDADES -->
+    <div class="col-md-12 col-lg-4">
+      <div class="panel panel-default">
+
+        <div class="panel-title">
+          Ver conformidades
+          <ul class="panel-tools">
+            <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+            <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+            <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="panel-body">
+          <p class="col-lg-12">Veja fotos das campanhas e diga se estão de acordo ou não:</p>
+          <div class="col-md-4">
+                <div class="checkbox checkbox-warning">
+                    <input id="status-analisar" type="checkbox" checked>
+                    <label for="status-analisar">
+                    A analisar
+                    </label>
+                </div>
+
+                <div class="checkbox checkbox-success">
+                    <input id="status-acordo" type="checkbox">
+                    <label for="status-acordo">
+                    De acordo
+                    </label>
+                </div>
+
+                <div class="checkbox checkbox-danger">
+                    <input id="status-erro" type="checkbox">
+                    <label for="status-erro">
+                    Errado
+                    </label>
+                </div>
+                <a href="#" class="btn btn-rounded btn-default">Filtrar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- End Grafico -->
+
+  <!-- TABELA -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+
+        <div class="panel-title">
+          Tabela PDV
+        </div>
+
+        <div class="panel-body">
+          <p>Segue informações abaixo:</p>
+
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <td>PDV</td>
+                <td>Campanha</td>
+                <td>Tipo de loja</td>
+                <td>Fotos</td>
+                <td>Dia</td>
+                <td>Data limite análise</td>
+                <td>Data análise</td>
+                <td>Prazo</td>
+                <td>Feedback</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#">Unidade Mundo Verde Morumbi</a></td>
+                <td><a href="#">Dia das mães</a></td>
+                <td>Premium</td>
+                <td><button type="button" class="btn btn-light btn-sm"><i class="fa fa-file-picture-o"></i>Ver</button></td>
+                <td>27/11/2017 00:11</td>
+                <td>03/11/2017 00:11</td>
+                <td>18/12/2017 11:12</td>
+                <td>45 dia(s) fora do prazo</td>
+                <td><span class="text-uppercase color10">Errado</span></td>
+              </tr>
+              <tr>
+                <td><a href="#">Unidade Mundo Verde Morumbi</a></td>
+                <td><a href="#">Dia das mães</a></td>
+                <td>Premium</td>
+                <td><button type="button" class="btn btn-light btn-sm"><i class="fa fa-file-picture-o"></i>Ver</button></td>
+                <td>27/11/2017 00:11</td>
+                <td>03/11/2017 00:11</td>
+                <td>18/12/2017 11:12</td>
+                <td>45 dia(s) fora do prazo</td>
+                <td><span class="text-uppercase color7">Analisado</span></td>
+              </tr>
+              <tr>
+                <td><a href="#">Unidade Mundo Verde Morumbi</a></td>
+                <td><a href="#">nova campanha</a></td>
+                <td>Premium</td>
+                <td><button type="button" class="btn btn-light btn-sm"><i class="fa fa-file-picture-o"></i>Ver</button></td>
+                <td>27/11/2017 00:11</td>
+                <td>03/11/2017 00:11</td>
+                <td>18/12/2017 11:12</td>
+                <td>36 dia(s) fora do prazo</td>
+                <td><span class="text-uppercase color10">Errado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 </div>
 <!-- END CONTAINER -->
