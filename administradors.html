@@ -116,7 +116,7 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Usuários</h1>
+    <h1 class="title">Administradores</h1>
       <ol class="breadcrumb">
         <li><a href="index.html">Relátorio</a></li>
         <li><a href="#">Tabela</a></li>
@@ -142,8 +142,8 @@
 
     <div class="col-lg-12 col-md-6 titles">
       <span class="icon color10-bg"><i class="fa fa-table"></i></span>
-      <h1>Usuários</h1>
-      <h4>Confira abaixo nossa lista de usuarios</h4>
+      <h1>Administradores</h1>
+      <a href="#" class="btn btn-rounded btn-light"><i class="fa fa-user"></i> Novo Administrador</a>
     </div>
   </div>
   <!-- End Presentation -->
@@ -161,18 +161,16 @@
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-title">
-          Listando usuarios
+          Listando administradores
         </div>
         <div class="panel-body table-responsive">
 
             <table id="example0" class="table display">
                 <thead>
                     <tr>
-                        <th>PDV</th>
                         <th>Nome</th>
                         <th>E-mail</th>
-                        <th></th>
-                        <th></th>
+                        <th>Marca</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -180,11 +178,9 @@
              
                 <tfoot>
                     <tr>
-                        <th>PDV</th>
                         <th>Nome</th>
                         <th>E-mail</th>
-                        <th></th>
-                        <th></th>
+                        <th>Marca</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -192,39 +188,30 @@
              
                 <tbody>
                     <tr>
-                        <td><a href="#">Unidade Mundo Verde Morumbi (09.809.809/8080-80)</a></td>
                         <td>Danilo</td>
                         <td>danilo@beminfinito.com.br</td>
-                        <td><span class="btn btn-default"><i class="fa fa-send"></i>Responder</span></td>
-                        <td><span class="btn btn-success"><i class="fa fa-newspaper-o"></i>Mostrar</span></td>
-                        <td><span class="btn btn-warning"><i class="fa fa-edit"></i>Editar</span></td>
+                        <td>Mundo verde</td>
+                        <td>
+                          <a class="btn btn-success" data-toggle="modal" data-target="#myModal"><i class="fa fa-newspaper-o"></i>Mostrar</a>
+                        </td>
                         <td><span class="btn btn-danger"><i class="fa fa-close"></i>Apagar</span></td>
                     </tr>
                     <tr>
-                        <td><a href="#">Unidade Mundo Verde Morumbi (09.809.809/8080-80)</a></td>
                         <td>Danilo</td>
                         <td>danilo@beminfinito.com.br</td>
-                        <td><span class="btn btn-default"><i class="fa fa-send"></i>Responder</span></td>
-                        <td><span class="btn btn-success"><i class="fa fa-newspaper-o"></i>Mostrar</span></td>
-                        <td><span class="btn btn-warning"><i class="fa fa-edit"></i>Editar</span></td>
+                        <td>Mundo verde</td>
+                        <td>
+                          <a class="btn btn-success" data-toggle="modal" data-target="#myModal"><i class="fa fa-newspaper-o"></i>Mostrar</a>
+                        </td>
                         <td><span class="btn btn-danger"><i class="fa fa-close"></i>Apagar</span></td>
                     </tr>
                     <tr>
-                        <td><a href="#">Unidade Mundo Verde Morumbi (09.809.809/8080-80)</a></td>
                         <td>Danilo</td>
                         <td>danilo@beminfinito.com.br</td>
-                        <td><span class="btn btn-default"><i class="fa fa-send"></i>Responder</span></td>
-                        <td><span class="btn btn-success"><i class="fa fa-newspaper-o"></i>Mostrar</span></td>
-                        <td><span class="btn btn-warning"><i class="fa fa-edit"></i>Editar</span></td>
-                        <td><span class="btn btn-danger"><i class="fa fa-close"></i>Apagar</span></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Unidade Mundo Verde Morumbi (09.809.809/8080-80)</a></td>
-                        <td>Danilo</td>
-                        <td>danilo@beminfinito.com.br</td>
-                        <td><span class="btn btn-default"><i class="fa fa-send"></i>Responder</span></td>
-                        <td><span class="btn btn-success"><i class="fa fa-newspaper-o"></i>Mostrar</span></td>
-                        <td><span class="btn btn-warning"><i class="fa fa-edit"></i>Editar</span></td>
+                        <td>Mundo verde</td>
+                        <td>
+                          <a class="btn btn-success" data-toggle="modal" data-target="#myModal"><i class="fa fa-newspaper-o"></i>Mostrar</a>
+                        </td>
                         <td><span class="btn btn-danger"><i class="fa fa-close"></i>Apagar</span></td>
                     </tr>
                 </tbody>
@@ -240,7 +227,68 @@
   </div>
   <!-- End Row -->
 
+  <!-- Start Panel MODAL -->
+    <div class="col-md-12 col-lg-4">
 
+        <div class="panel-body">
+          <!-- Start Modal Code -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content"
+>                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Administrador</h4>
+                    </div>
+                        <div class="modal-body">
+                               <div class="panel-body">
+                                  <form class="form-horizontal">
+
+                                    <div class="form-group">
+                                      <label class="col-sm-2 control-label form-label">Marca</label>
+                                      <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Marca" placeholder="Mundo verde" disabled="">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label for="input002" class="col-sm-2 control-label form-label">Nome</label>
+                                      <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="name" placeholder="danilo" disabled="">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label for="input002" class="col-sm-2 control-label form-label">E-mail</label>
+                                      <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="email" placeholder="danilo@beminfinito.com.br" disabled="">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label for="input002" class="col-sm-2 control-label form-label">Senha</label>
+                                      <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="senha" placeholder="" value="000000" disabled="">
+                                      </div>
+                                    </div>
+
+                                  </form> 
+
+                              </div>
+                        </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-warning">Editar</button>
+                    <button type="button" class="btn btn-default">Atualizar Administrador</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <!-- End Moda Code -->
+        </div>
+    </div>
+    <!-- End Panel -->
 
 
 
